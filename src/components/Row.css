@@ -34,9 +34,9 @@
 }
 .row__popup {
   margin: 1em;
-  padding: 3em;
+  padding: 3em 1em;
   font-size: 0.5rem;
-  height: 300px;
+  height: 350px;
   background-image: linear-gradient(
     180deg,
     transparent,
@@ -56,7 +56,6 @@
   display: none;
 }
 .row__popup img {
-  margin-left: 5em;
   max-width: 20em;
 }
 .row__popup__content {
@@ -130,4 +129,15 @@
   color: black;
   background-color: #e6e6e6;
   transition: all ease-in-out 0.2s;
+}
+
+@media all and (min-width: 530px) {
+  .row__popup img {
+    max-width: 28em;
+  }
+}
+@media all and (max-width: 530px) {
+  .row__popup {
+    height: 250px;
+  }
 }
