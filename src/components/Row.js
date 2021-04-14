@@ -1,20 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
-import YouTube from "react-youtube";
+
 import axios from "../axios";
 
 import FadeIn from "react-fade-in";
 import "../components/Row.css";
 const IMAGE_URL = `https://image.tmdb.org/t/p/w500`;
 const Row = ({ title, fetchUrl, isLargePoster }) => {
-  const opts = {
-    height: "390",
-    width: "100%",
-    playerVars: {
-      autoplay: 1,
-    },
-  };
   const [movies, setMovies] = useState([]);
-  // const [trailerUrl, setTrailerUrl] = useState("");
+
   const [clickedMovie, setClickedMovie] = useState("");
   const popupRef = useRef();
 
@@ -25,19 +18,6 @@ const Row = ({ title, fetchUrl, isLargePoster }) => {
     }
     fetchMovies();
   }, [fetchUrl]);
-
-  // const handleClick = (movie) => {
-  //   if (trailerUrl) {
-  //     setTrailerUrl("");
-  //   } else {
-  //     movieTrailer(movie?.name || "")
-  //       .then((url) => {
-  //         const urlParams = new URLSearchParams(new URL(url).search);
-  //         setTrailerUrl(urlParams.get("v"));
-  //       })
-  //       .catch((err) => {});
-  //   }
-  // };
 
   const handleClick = (movie) => {
     popupRef.current?.scrollIntoView({
@@ -53,7 +33,6 @@ const Row = ({ title, fetchUrl, isLargePoster }) => {
     }
   };
 
-  console.log(movies);
   return (
     <div className="row">
       <h2 className="row__title">{title}</h2>
@@ -90,7 +69,7 @@ const Row = ({ title, fetchUrl, isLargePoster }) => {
               <div className="row__popup__title">
                 <div>{clickedMovie?.title || clickedMovie?.name}</div>
                 <button className="row__popup__add">
-                  <i class="bx bx-plus"></i>My List
+                  <i className="bx bx-plus"></i>My List
                 </button>
               </div>
               <h3 className="row__popup__description">
@@ -103,7 +82,6 @@ const Row = ({ title, fetchUrl, isLargePoster }) => {
           </div>
         </FadeIn>
       )}
-      {/* {trailerUrl && <YouTube videoId={trailerUrl} opts={opts}></YouTube>} */}
     </div>
   );
 };

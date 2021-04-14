@@ -85,7 +85,7 @@
 }
 
 .row__popup__description {
-  font-size: 1.5vw;
+  font-size: 1.6vw;
 }
 .row__popup__poster {
   position: relative;
@@ -114,13 +114,12 @@
   letter-spacing: 0.1em;
 }
 .row__popup__add {
-  font-size: 1rem;
+  font-size: 1.5vw;
   cursor: pointer;
   color: #fff;
   outline: none;
   border: none;
-  max-height: 50px;
-
+  max-height: 100px;
   font-weight: 700;
   border-radius: 2px;
   padding: 0.5rem 1rem;

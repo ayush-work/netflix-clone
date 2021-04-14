@@ -15,7 +15,7 @@ const Banner = () => {
     }
     fetchMovies();
   }, []);
-  console.log(movie);
+
   function truncateString(str, num) {
     if (str?.length > num) {
       return str.slice(0, num) + "...";
