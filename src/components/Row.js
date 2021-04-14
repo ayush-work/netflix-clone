@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import YouTube from "react-youtube";
 import axios from "../axios";
-import movieTrailer from "movie-trailer";
-import ScrollIntoView from "react-scroll-into-view";
+
 import FadeIn from "react-fade-in";
 import "../components/Row.css";
 const IMAGE_URL = `https://image.tmdb.org/t/p/w500`;
@@ -15,7 +14,7 @@ const Row = ({ title, fetchUrl, isLargePoster }) => {
     },
   };
   const [movies, setMovies] = useState([]);
-  const [trailerUrl, setTrailerUrl] = useState("");
+  // const [trailerUrl, setTrailerUrl] = useState("");
   const [clickedMovie, setClickedMovie] = useState("");
   const popupRef = useRef();
 
