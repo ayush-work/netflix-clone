@@ -103,7 +103,7 @@ const Row = ({ title, fetchUrl, isLargePoster }) => {
           </div>
         </FadeIn>
       )}
-      {trailerUrl && <YouTube videoId={trailerUrl} opts={opts}></YouTube>}
+      {/* {trailerUrl && <YouTube videoId={trailerUrl} opts={opts}></YouTube>} */}
     </div>
   );
 };
