@@ -19,12 +19,14 @@ const Row = ({ title, fetchUrl, isLargePoster }) => {
     fetchMovies();
   }, [fetchUrl]);
 
-  const handleClick = (movie) => {
+  const handleClick = (movie, idx) => {
+    console.log(movie, clickedMovie, idx);
     popupRef.current?.scrollIntoView({
       behavior: "smooth",
       block: "center",
       inline: "center",
     });
+
     if (clickedMovie !== movie) {
       setClickedMovie(movie);
     }
@@ -37,10 +39,10 @@ const Row = ({ title, fetchUrl, isLargePoster }) => {
     <div className="row">
       <h2 className="row__title">{title}</h2>
       <div className="row__posters">
-        {movies.map((movie) => {
+        {movies.map((movie, idx) => {
           return (
             <img
-              onClick={() => handleClick(movie)}
+              onClick={() => handleClick(movie, idx)}
               className={`row__poster ${isLargePoster ? `large` : ""}`}
               src={`${IMAGE_URL}${
                 isLargePoster ? movie.poster_path : movie.backdrop_path
