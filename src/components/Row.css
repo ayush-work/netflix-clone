@@ -28,16 +28,107 @@
 .row {
   margin-left: 0.5em;
 }
-.row h2 {
+.row_-title {
   margin-left: 0.25em;
   padding-left: 0.1em;
 }
-.row__poster--info {
+.row__popup {
+  margin: 1em;
+  padding: 3em;
   font-size: 0.5rem;
-  height: 400px;
-  background-color: rgba(51, 51, 51, 0.5);
+  height: 350px;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
   border-radius: 5px;
   z-index: 2;
   display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.row__popup::-webkit-scrollbar {
+  display: none;
+}
+.row__popup img {
+  margin-left: 5em;
+  max-width: 28em;
+}
+.row__popup__content {
+  margin-left: 1em;
+  padding: 0 2em;
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  font-size: 1rem;
+  max-height: 50%;
+}
+.row__popup__title {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  justify-content: center;
+  gap: 2em;
+  line-height: 100%;
+  margin-bottom: 1em;
+  font-size: 3vw;
+  font-weight: 800;
+}
+.row__popup__title span {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #e0e0e0;
+}
+
+.row__popup__description {
+  font-size: 1.5vw;
+}
+.row__popup__poster {
+  position: relative;
+}
+.row__popup__rating {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #e50914;
+  font-weight: bolder;
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  align-items: center;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.row__popup__vote {
+  align-items: center;
+  margin-top: 1em;
+  justify-self: flex-end;
+  font-size: 0.9rem;
+  color: #e50914;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+.row__popup__add {
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  max-height: 50px;
+
+  font-weight: 700;
+  border-radius: 2px;
+  padding: 0.5rem 1rem;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.row__popup__add:hover {
+  color: black;
+  background-color: #e6e6e6;
+  transition: all ease-in-out 0.2s;
 }

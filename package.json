@@ -10,7 +10,9 @@
     "movie-trailer": "^2.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-fade-in": "^2.0.1",
     "react-scripts": "4.0.3",
+    "react-scroll-into-view": "^1.8.2",
     "react-youtube": "^7.13.1",
     "web-vitals": "^1.1.1"
   },
